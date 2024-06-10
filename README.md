@@ -22,6 +22,7 @@
 
 - Clone this repository
 - Go to Client folder
+- Confirmed that the latest version of Node.js is installed on the system to avoid any compatibility issues.
 - put `VITE_BASE_URL=http://localhost:3001` in your env
 - Type `npm i` in the terminal to install dependencies
 - Type `npm run dev` in the terminal to run
