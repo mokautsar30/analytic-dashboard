@@ -2,21 +2,14 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { AiOutlineDollar, AiOutlineCrown } from "react-icons/ai";
 import { PiPackage } from "react-icons/pi";
+import filterSales from "../../utils/filterSales";
 
 const Statistic = () => {
   const { sales, searchTerm, startDate, endDate } = useSelector(
     (state) => state.sales
   );
 
-  const filteredSales = sales.filter((sale) => {
-    const matchesProduct = sale.product
-      .toLowerCase()
-      .includes(searchTerm.toLowerCase());
-    const matchesDate =
-      (!startDate || new Date(sale.date) >= new Date(startDate)) &&
-      (!endDate || new Date(sale.date) <= new Date(endDate));
-    return matchesProduct && matchesDate;
-  });
+  const filteredSales = filterSales(sales, searchTerm, startDate, endDate);
 
   const totalSales = filteredSales.reduce((acc, sale) => acc + sale.sales, 0);
   const totalRevenue = filteredSales.reduce(
@@ -86,7 +79,7 @@ const Statistic = () => {
             <div className="pt-1 text-right">
               <p className="text-sm font-light capitalize">Total Revenue</p>
               <h4 className="text-2xl font-semibold tracking-tighter xl:text-2xl">
-              {formattedTotalRevenue}
+                {formattedTotalRevenue}
               </h4>
             </div>
 

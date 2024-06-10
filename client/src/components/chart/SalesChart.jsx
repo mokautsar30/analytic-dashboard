@@ -12,21 +12,14 @@ import {
   Bar,
   ResponsiveContainer,
 } from "recharts";
+import filterSales from "../../utils/filterSales";
 
 const SalesChart = () => {
   const { sales, searchTerm, startDate, endDate } = useSelector(
     (state) => state.sales
   );
 
-  const filteredSales = sales.filter((sale) => {
-    const matchesProduct = sale.product
-      .toLowerCase()
-      .includes(searchTerm.toLowerCase());
-    const matchesDate =
-      (!startDate || new Date(sale.date) >= new Date(startDate)) &&
-      (!endDate || new Date(sale.date) <= new Date(endDate));
-    return matchesProduct && matchesDate;
-  });
+  const filteredSales = filterSales(sales, searchTerm, startDate, endDate);
 
   return (
     <div className="flex flex-col md:flex-row justify-between mb-4 space-y-4 md:space-y-0 md:space-x-4">
