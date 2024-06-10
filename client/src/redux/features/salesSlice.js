@@ -21,7 +21,7 @@ const salesSlice = createSlice({
             state.startDate = action.payload.startDate;
             state.endDate = action.payload.endDate;
         },
-        fetchSalesStart: (state, action) => {
+        fetchSalesStart: (state) => {
             state.loading = true;
             state.error = ''
         },
