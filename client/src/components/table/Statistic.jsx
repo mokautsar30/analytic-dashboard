@@ -36,6 +36,11 @@ const Statistic = () => {
     ""
   );
 
+  const formattedTotalRevenue = new Intl.NumberFormat("id-ID", {
+    style: "currency",
+    currency: "IDR",
+  }).format(totalRevenue);
+
   const minDate = new Date(
     Math.min(...filteredSales.map((sale) => new Date(sale.date)))
   );
@@ -65,7 +70,7 @@ const Statistic = () => {
             <hr className="opacity-50" />
             <div className="p-4">
               <p className="font-light">
-                <span className="text-sm font-bold text-green-600">
+                <span className="rounded-full bg-green-200 px-3 py-1 text-xs font-semibold text-green-900">
                   {" "}
                   {formattedStartDate} to {formattedEndDate}{" "}
                 </span>
@@ -81,14 +86,14 @@ const Statistic = () => {
             <div className="pt-1 text-right">
               <p className="text-sm font-light capitalize">Total Revenue</p>
               <h4 className="text-2xl font-semibold tracking-tighter xl:text-2xl">
-                ${totalRevenue}
+              {formattedTotalRevenue}
               </h4>
             </div>
 
             <hr className="opacity-50" />
             <div className="p-4">
               <p className="font-light">
-                <span className="text-sm font-bold text-green-600">
+                <span className="rounded-full bg-green-200 px-3 py-1 text-xs font-semibold text-green-900">
                   {" "}
                   {formattedStartDate} to {formattedEndDate}{" "}
                 </span>
@@ -110,7 +115,7 @@ const Statistic = () => {
             <hr className="opacity-50" />
             <div className="p-4">
               <p className="font-light">
-                <span className="text-sm font-bold text-green-600">
+                <span className="rounded-full bg-yellow-200 px-3 py-1 text-xs font-semibold text-yellow-900">
                   Best selling Product{" "}
                 </span>
               </p>

@@ -26,7 +26,7 @@ function App() {
             <SalesChart />
           </div>
         </div>
-        <div className="w-full overflow-x-auto mb-4">
+        <div className="mt-6 overflow-hidden rounded-xl bg-white px-6 py-4 shadow-lg lg:px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <DateFilter />
             <SearchBar />
