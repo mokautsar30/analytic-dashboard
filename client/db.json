@@ -11,7 +11,7 @@
         "id": 2,
         "product": "Product B",
         "date": "2023-01-02",
-        "sales": 100,
+        "sales": 50,
         "revenue": 2000
       },
       {
@@ -20,6 +20,55 @@
         "date": "2023-01-03",
         "sales": 200,
         "revenue": 5000
+      },
+      {
+        "id": 4,
+        "product": "Product D",
+        "date": "2023-01-04",
+        "sales": 220,
+        "revenue": 2400
+      },
+      {
+        "id": 5,
+        "product": "Product E",
+        "date": "2023-01-05",
+        "sales": 180,
+        "revenue": 3600
+      },
+      {
+        "id": 6,
+        "product": "Product F",
+        "date": "2023-01-06",
+        "sales": 360,
+        "revenue": 4400
+      },
+      {
+        "id": 7,
+        "product": "Product G",
+        "date": "2023-01-07",
+        "sales": 130,
+        "revenue": 1800
+      },
+      {
+        "id": 8,
+        "product": "Product H",
+        "date": "2023-01-08",
+        "sales": 300,
+        "revenue": 2600
+      },
+      {
+        "id": 9,
+        "product": "Product I",
+        "date": "2023-01-09",
+        "sales": 170,
+        "revenue": 3400
+      },
+      {
+        "id": 10,
+        "product": "Product J",
+        "date": "2023-01-10",
+        "sales": 400,
+        "revenue": 2200
       }
     ]
   }
