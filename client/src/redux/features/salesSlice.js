@@ -48,7 +48,7 @@ export const {
 export const fetchSales = () => async (dispatch) => {
     dispatch(fetchSalesStart());
     try {
-        const response = await axios.get('http://localhost:3001/sales');
+        const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/sales`);
         dispatch(fetchSalesSuccess(response.data))
     } catch (error) {
         dispatch(fetchSalesFail(error.message))
