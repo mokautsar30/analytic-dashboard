@@ -10,6 +10,7 @@ import {
   Legend,
   BarChart,
   Bar,
+  ResponsiveContainer,
 } from "recharts";
 
 const SalesChart = () => {
@@ -28,29 +29,36 @@ const SalesChart = () => {
   });
 
   return (
-    <div className="flex flex-col md:flex-row justify-between mb-4">
-      <LineChart width={750} height={300} data={filteredSales}>
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="date" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <Line
-          type="monotone"
-          dataKey="sales"
-          stroke="#8884d8"
-          activeDot={{ r: 8 }}
-        />
-      </LineChart>
-
-      <BarChart width={450} height={300} data={filteredSales}>
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="product" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <Bar dataKey="sales" fill="#c90076" />
-      </BarChart>
+    <div className="flex flex-col md:flex-row justify-between mb-4 space-y-4 md:space-y-0 md:space-x-4">
+      <div className="w-full md:w-1/2 h-64">
+        <ResponsiveContainer>
+          <LineChart data={filteredSales}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="date" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Line
+              type="monotone"
+              dataKey="sales"
+              stroke="#8884d8"
+              activeDot={{ r: 8 }}
+            />
+          </LineChart>
+        </ResponsiveContainer>
+      </div>
+      <div className="w-full md:w-1/2 h-64">
+        <ResponsiveContainer>
+          <BarChart data={filteredSales}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="product" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Bar dataKey="sales" fill="#c90076" />
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
     </div>
   );
 };
