@@ -69,6 +69,13 @@
       "date": "2024-05-10",
       "sales": 400,
       "revenue": 2200
+    },
+    {
+      "id": 11,
+      "product": "Product J",
+      "date": "2024-05-11",
+      "sales": 390,
+      "revenue": 3000
     }
   ]
 }

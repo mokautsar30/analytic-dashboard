@@ -36,6 +36,16 @@ const Statistic = () => {
     ""
   );
 
+  const minDate = new Date(
+    Math.min(...filteredSales.map((sale) => new Date(sale.date)))
+  );
+  const maxDate = new Date(
+    Math.max(...filteredSales.map((sale) => new Date(sale.date)))
+  );
+
+  const formattedStartDate = minDate.toLocaleDateString();
+  const formattedEndDate = maxDate.toLocaleDateString();
+
   return (
     <>
       <div className="flex flex-wrap gap-x-4 gap-y-12 bg-gray-100 rounded-2xl px-4 py-10 lg:px-10 justify-center items-center mb-5">
@@ -55,8 +65,10 @@ const Statistic = () => {
             <hr className="opacity-50" />
             <div className="p-4">
               <p className="font-light">
-                <span className="text-sm font-bold text-green-600">+22% </span>
-                vs last month
+                <span className="text-sm font-bold text-green-600">
+                  {" "}
+                  {formattedStartDate} to {formattedEndDate}{" "}
+                </span>
               </p>
             </div>
           </div>
@@ -76,8 +88,10 @@ const Statistic = () => {
             <hr className="opacity-50" />
             <div className="p-4">
               <p className="font-light">
-                <span className="text-sm font-bold text-green-600">+22% </span>
-                vs last month
+                <span className="text-sm font-bold text-green-600">
+                  {" "}
+                  {formattedStartDate} to {formattedEndDate}{" "}
+                </span>
               </p>
             </div>
           </div>
@@ -96,8 +110,9 @@ const Statistic = () => {
             <hr className="opacity-50" />
             <div className="p-4">
               <p className="font-light">
-                <span className="text-sm font-bold text-green-600">+22% </span>
-                vs last month
+                <span className="text-sm font-bold text-green-600">
+                  Best selling Product{" "}
+                </span>
               </p>
             </div>
           </div>
