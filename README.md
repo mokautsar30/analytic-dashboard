@@ -31,3 +31,11 @@
 
 
 ## SCREENSHOOT : 
+
+<img width="1440" alt="Screenshot 2024-06-10 at 21 51 32" src="https://github.com/mokautsar30/analytic-dashboard/assets/124751818/21e28bd5-ca92-42a0-85ff-c58ef2c07389">
+
+<img width="1440" alt="Screenshot 2024-06-10 at 21 55 46" src="https://github.com/mokautsar30/analytic-dashboard/assets/124751818/0bcafe56-9952-4a27-aa6f-b8fb5ccc7bc6">
+
+<img width="1440" alt="Screenshot 2024-06-10 at 21 55 52" src="https://github.com/mokautsar30/analytic-dashboard/assets/124751818/7b0b25e9-5094-4172-b96f-2343cc4c07d2">
+
+<img width="1440" alt="Screenshot 2024-06-10 at 21 55 57" src="https://github.com/mokautsar30/analytic-dashboard/assets/124751818/83034641-1619-4154-a07a-daefdba10500">
