@@ -4,6 +4,8 @@ import { useDispatch } from "react-redux";
 import { fetchSales } from "./redux/features/salesSlice";
 import SalesChart from "./components/chart/SalesChart";
 import Statistic from "./components/table/Statistic";
+import DateFilter from "./components/ui/DateFilter";
+import SearchBar from "./components/ui/SearchBar";
 
 function App() {
   const dispatch = useDispatch();
@@ -24,7 +26,11 @@ function App() {
             <SalesChart />
           </div>
         </div>
-        <div className="w-full overflow-x-auto">
+        <div className="w-full overflow-x-auto mb-4">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <DateFilter />
+            <SearchBar />
+          </div>
           <SalesTable />
         </div>
       </div>
